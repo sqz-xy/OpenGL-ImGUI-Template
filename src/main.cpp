@@ -8,6 +8,7 @@
 #include "glad.h"
 #include "glfw3.h"
 #include "stb_image.h"
+#include "irrKlang.h"
 
 #include <iostream>
 #include <ostream>
@@ -123,6 +124,8 @@ bool create_shader_program(unsigned int* pVertexShader, unsigned int* pFragmentS
  */
 int main()
 {
+    irrklang::ISoundEngine* SoundEngine = irrklang::createIrrKlangDevice();
+
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
